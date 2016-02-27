@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "webapp/template-blank-ad-project/sample.zip",
       "projectGuid": "4efa9bbe-5fdc-4a8f-b291-c98678335458",
-      "lastModifiedDate": 1456093751314,
+      "lastModifiedDate": 1456163264199,
       "creationDate": 1456008946321
     },
     "XDK-app-designer": "true",
@@ -22,8 +22,8 @@
         "id": "phonegap-plugin-push",
         "name": "PushPlugin",
         "version": "1.4.3",
-        "originType": "cordova.io",
-        "origin": "phonegap-plugin-push",
+        "originType": "local",
+        "origin": "./plugins/phonegap-plugin-push",
         "gitref": "",
         "paramvals": {},
         "sourceLocation": "plugins/phonegap-plugin-push",
@@ -67,6 +67,28 @@
         "description": "\r\n        Provides access to the standard interface that manages\r\n        the editing and sending an email message\r\n    ",
         "data": {},
         "dependedBy": []
+      },
+      {
+        "id": "com.adobe.plugins.GAPlugin",
+        "name": "GAPlugin",
+        "version": "2.4.0",
+        "originType": "repo",
+        "origin": "https://github.com/phonegap-build/GAPlugin.git",
+        "gitref": "",
+        "subdir": ".",
+        "paramvals": {},
+        "sourceLocation": "plugins/com.adobe.plugins.GAPlugin",
+        "selectedState": "Included",
+        "checksum": "de2246f6",
+        "dependsOn": [],
+        "topLevel": true,
+        "cordovaVersion": ">=3.0.0",
+        "author": "Bob Easterday",
+        "permissions": {},
+        "description": "\r\n    This plugin allows you to post usage information to your Google Analytics account.\r\n  ",
+        "data": {},
+        "dependedBy": [],
+        "custom": "true"
       }
     ],
     "buildConfigurations": {
@@ -109,7 +131,8 @@
         "preferences_": {
           "android-minSdkVersion": "14",
           "android-targetSdkVersion": "19",
-          "android-installLocation": "auto"
+          "android-installLocation": "auto",
+          "Fullscreen": true
         },
         "isActive_": true,
         "appName_": "pushXDK",
@@ -129,10 +152,10 @@
         "iosProvs_": [],
         "cordovaCLIVersion_": "5.1.1",
         "crosswalkVersion_": "14",
-        "appVersion_": "0.0.1",
+        "appVersion_": "0.0.2",
         "appAuthor_": "Intel XDK",
         "appDescription_": "Template to develop a packaged mobile web app using the App Designer UI editor.",
-        "appVersionCode_": "1"
+        "appVersionCode_": "19"
       },
       "iOS": {
         "platform_": "ios",

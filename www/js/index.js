@@ -17,6 +17,7 @@
  * under the License.
  */
 
+var gaPlugin;
 var app = {
     // Application Constructor
     initialize: function() {
@@ -34,6 +35,12 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+        gaPlugin = window.plugins.gaPlugin;
+        gaPlugin.init(
+            function (result) { $("#console").append('<p>' + 'AGPlugin: ' + result + '</p>'); }, 
+            function (error) { $("#console").append('<p>' + 'AGPlugin: ' + error + '</p>');	},
+            "UA-74154522-1", 10);
+        
         var push = PushNotification.init({
             "android": {
                 "senderID": "159951744035",
